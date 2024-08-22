@@ -13,8 +13,6 @@ const AddDocumentBtn = ({ userId, email }: AddDocumentBtnProps) => {
     try {
       const room = await createDocument({ userId, email });
 
-      console.log(room)
-
       if(room) router.push(`/documents/${room.id}`) 
     } catch (error) {
       console.log(error)
